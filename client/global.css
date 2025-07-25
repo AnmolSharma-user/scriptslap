@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* ScriptSlap Dark Theme */
+    --background: 218 11% 9%; /* Deep charcoal #111827 */
+    --foreground: 210 20% 98%; /* Pure white for headings */
+
+    --card: 218 11% 12%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 218 11% 12%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 168 76% 51%; /* Electric teal #2dd4bf */
+    --primary-foreground: 218 11% 9%;
+
+    --secondary: 217 10% 20%;
+    --secondary-foreground: 210 40% 82%; /* Off-white body text #d1d5db */
+
+    --muted: 217 10% 20%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 168 76% 51%; /* Electric teal accent */
+    --accent-foreground: 218 11% 9%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 10% 20%;
+    --input: 217 10% 20%;
+    --ring: 168 76% 51%; /* Electric teal ring */
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply font-sans;
+  }
+
+  body {
+    @apply bg-background text-secondary-foreground font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-foreground;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground;
+  }
+
+  .text-body {
+    @apply text-secondary-foreground;
+  }
+
+  .text-heading {
+    @apply text-foreground;
+  }
+}
